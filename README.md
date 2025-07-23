@@ -48,6 +48,15 @@ We recommend using the [pre-built docker image](https://hub.docker.com/r/hiyouga
 docker pull hiyouga/verl:ngc-th2.7.0-cu12.6-vllm0.9.1
 ```
 
+If your environment does not support Docker, you consider using **Apptainer**:
+
+```bash
+# pull
+apptainer pull easyr1.sif docker://hiyouga/verl:ngc-th2.7.0-cu12.6-vllm0.9.1
+# run
+apptainer shell --nv --cleanenv --bind /mnt/your_dir:/mnt/your_dir easyr1.sif
+```
+
 ### Hardware Requirements
 
 \* *estimated*
